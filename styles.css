@@ -6,6 +6,8 @@ body {
     color: white;
     margin: 0;
     padding: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 .container {
@@ -50,27 +52,28 @@ p {
     margin-top: 20px;
 }
 
+/* Symmetrical Hydrangea Flowers */
 body::before,
 body::after {
     content: '';
-    display: block;
     position: absolute;
     width: 150px;
     height: 150px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/db/Hydrangea_macrophylla_01.JPG');
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Hydrangea_macrophylla_3.JPG');
     background-size: cover;
     background-position: center;
-    filter: hue-rotate(240deg); /* Add a pink-and-blue tint */
+    filter: hue-rotate(240deg); /* Pink and blue tint */
+    opacity: 0.8;
 }
 
 body::before {
-    left: 20px;
+    left: 10%;
     top: 50%;
     transform: translateY(-50%);
 }
 
 body::after {
-    right: 20px;
+    right: 10%;
     top: 50%;
     transform: translateY(-50%);
 }
