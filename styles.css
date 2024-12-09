@@ -2,7 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: black;
+    color: white;
     margin: 0;
     padding: 20px;
 }
@@ -11,9 +12,9 @@ body {
     max-width: 500px;
     margin: 50px auto;
     padding: 20px;
-    background: white;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
@@ -26,6 +27,8 @@ input {
     padding: 10px;
     margin: 10px 0;
     font-size: 16px;
+    border: none;
+    border-radius: 5px;
 }
 
 button {
@@ -45,4 +48,29 @@ button:hover {
 p {
     font-size: 18px;
     margin-top: 20px;
+}
+
+body::before,
+body::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/db/Hydrangea_macrophylla_01.JPG');
+    background-size: cover;
+    background-position: center;
+    filter: hue-rotate(240deg); /* Add a pink-and-blue tint */
+}
+
+body::before {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+body::after {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
