@@ -1,7 +1,10 @@
 // script.js
 
 document.getElementById("convertButton").addEventListener("click", function () {
-    const steps = parseInt(document.getElementById("stepsInput").value);
+    const stepsInput = document.getElementById("stepsInput").value;
+    const sanitizedInput = stepsInput.replace(/,/g, ''); // Remove commas
+
+    const steps = parseInt(sanitizedInput);
     if (isNaN(steps) || steps < 0) {
         alert("Please enter a valid number of steps.");
         return;
